@@ -1,0 +1,37 @@
+<KeyboardHeader Platform.DeviceType="Skipper 5000" Keyboard.Name="Skipper 5000"/><ConfigValue><Name>KeyBoard.Skipper 5000.1</Name><Value>1 1 2 2 PLUPreset(32) None(0) Preset PLU(32)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.10</Name><Value>2 1 2 2 PLUPreset(39) None(0) Preset PLU(39)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.11</Name><Value>2 2 2 2 PLUPreset(56) None(0) Preset PLU(56)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.12</Name><Value>2 3 2 2 PLUPreset(64) None(0) Preset PLU(64)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.13</Name><Value>2 4 2 2 PLUPreset(34) None(0) Preset PLU(34)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.14</Name><Value>2 5 2 2 CombinationReportToday(0) CombinationReportPeriodA(0) Rapport combiné aujourd&apos;hui|Rapport combiné période A
+ CombinationReportPeriodA(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.19</Name><Value>3 1 2 2 PLUPreset(68) None(0) Preset PLU(68)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.2</Name><Value>1 2 2 2 PLUPreset(41) None(0) Preset PLU(41)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.20</Name><Value>3 2 2 2 PLUPreset(51) None(0) Preset PLU(51)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.21</Name><Value>3 3 2 2 PLUPreset(79) None(0) Preset PLU(79)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.22</Name><Value>3 4 2 2 PLUPreset(35) None(0) Preset PLU(35)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.23</Name><Value>3 5 2 2 TicketReopen(0) SalesJournalReportDetailed(0) Réouverture ticket|Journal des ventes détaillé
+ SalesJournalReportDetailed(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.28</Name><Value>4 1 2 2 PLUPreset(62) None(0) Preset PLU(62)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.29</Name><Value>4 2 2 2 PLUPreset(119) None(0) Preset PLU(119)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.3</Name><Value>1 3 2 2 PLUPreset(54) None(0) Preset PLU(54)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.30</Name><Value>4 3 2 2 PLUPreset(60) None(0) Preset PLU(60)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.31</Name><Value>4 4 2 2 PLUPreset(38) None(0) Preset PLU(38)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.32</Name><Value>4 5 2 2 OverwritePrice(0) None(0) Modifier prix
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.37</Name><Value>5 1 2 2 PLUPreset(116) None(0) Preset PLU(116)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.38</Name><Value>5 2 2 2 PLUPreset(36) None(0) Preset PLU(36)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.39</Name><Value>5 3 2 2 PLUPreset(61) None(0) Preset PLU(61)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.4</Name><Value>1 4 2 2 PLUPreset(42) None(0) Preset PLU(42)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.40</Name><Value>5 4 2 2 PLUPreset(48) None(0) Preset PLU(48)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.41</Name><Value>5 5 2 2 Refund(0) ClearKeyEvent(0) Remboursement|Aucun
+ ClearKeyEvent(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.46</Name><Value>6 1 2 2 PLUPreset(118) None(0) Preset PLU(118)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.47</Name><Value>6 2 2 2 PLUPreset(113) None(0) Preset PLU(113)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.48</Name><Value>6 3 2 2 PLUPreset(121) None(0) Preset PLU(121)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.49</Name><Value>6 4 2 2 PLUPreset(120) None(0) Preset PLU(120)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.5</Name><Value>1 5 2 2 TicketCopyOnDemand(0) None(0) Copie ticket
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.50</Name><Value>6 5 2 2 TicketCopyOnDemand(0) ClearKeyEvent(0) Copie ticket|Aucun
+ ClearKeyEvent(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.55</Name><Value>7 1 2 2 CashIn(0) None(0) Encaissement
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.56</Name><Value>7 2 2 2 CashOut(0) None(0) Décaissement
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.57</Name><Value>7 3 2 2 PaymentMethod(1) None(0) Mode de paiement(1)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.58</Name><Value>7 4 2 2 PaymentMethod(3) None(0) Mode de paiement(3)
+ None(0)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.59</Name><Value>7 5 2 2 VKey(2) VKeyLongPress(2) V(2)|V Appui long(2)
+ VKeyLongPress(2)</Value></ConfigValue><ConfigValue><Name>KeyBoard.Skipper 5000.9</Name><Value>1 9 2 2 Favorites(0) Favorites(0) Touche FN|Touche FN
+ FnLongKey(0)</Value></ConfigValue>
