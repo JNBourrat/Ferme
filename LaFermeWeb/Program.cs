@@ -1,7 +1,15 @@
+using LaFermeWeb.Helper;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+{
+	var services = builder.Services;
+	var env = builder.Environment;
+
+	// Add services to the container.
+	services.AddRazorPages();
+	services.AddDbContext<DataContext>();
+}
 
 var app = builder.Build();
 
