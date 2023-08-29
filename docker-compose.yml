@@ -1,12 +1,22 @@
 version: '3.8'
+
+networks:
+  lfdpa_network:
+    driver: bridge
+
 services:
   lafermeweb:
     image: mcr.microsoft.com/dotnet/sdk:6.0
     container_name: lfdpa-caisse
+    depends_on:
+      - lfdpa_db
+    networks:
+      - lfdpa_network
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - DOTNET_USE_POLLING_FILE_WATCHER=true
       - DOTNET_WATCH_AUTO_RELOAD_WS_HOSTNAME=localhost:1234;http://*:5005;http://127.0.0.1 # laisser ces ports pour que la websocket du hot reload soit configurée sur le port 5005
+      - ConnectionStrings__DefaultConnection=User ID=postgres;Password=postgres;Server=lfdpa_db;Port=5432;Database=LFDPA; IntegratedSecurity=true;Pooling=true;
       # - ASPNETCORE_Kestrel__Certificates__Development__Path=/root/.aspnet/https/lafermeweb
       # - ASPNETCORE_Kestrel__Certificates__Development__Password=lafermeweb
     ports:
@@ -19,3 +29,27 @@ services:
       # - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
     working_dir: /app
     command: dotnet watch run --urls=http://+:5180;https://+:7180 --project LaFermeWeb.csproj
+  lfdpa_db:
+    image: postgres:latest
+    container_name: lfdpa_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=LFDPA
+    ports:
+      - "5433:5432"
+    volumes:
+      - lfdpa_donnees:/var/lib/postgresql/data
+    networks:
+      - lfdpa_network
+  adminer:
+    image: adminer:latest
+    depends_on:
+      - lfdpa_db
+    ports:
+      - 8086:8080
+    networks:
+      - lfdpa_network
+
+volumes:
+  lfdpa_donnees:
