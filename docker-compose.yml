@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  lafermeweb:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    container_name: lfdpa-caisse
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_USE_POLLING_FILE_WATCHER=true
+      - DOTNET_WATCH_AUTO_RELOAD_WS_HOSTNAME=localhost:1234;http://*:5005;http://127.0.0.1 # laisser ces ports pour que la websocket du hot reload soit configurée sur le port 5005
+      # - ASPNETCORE_Kestrel__Certificates__Development__Path=/root/.aspnet/https/lafermeweb
+      # - ASPNETCORE_Kestrel__Certificates__Development__Password=lafermeweb
+    ports:
+      - "5180:5180"
+      - "7180:7180"
+      - "1234:5005" # mapping des ports pour la websocket du hot reload
+    volumes:
+      - ./LaFermeWeb:/app
+      # - ${HOME}/.aspnet:/root/.aspnet
+      # - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+    working_dir: /app
+    command: dotnet watch run --urls=http://+:5180;https://+:7180 --project LaFermeWeb.csproj
