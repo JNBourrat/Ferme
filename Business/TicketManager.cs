@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business.PrimaryAdapter;
+using Business.SecondaryAdapter;
 using LaFermeWeb.Models;
 using Microsoft.Extensions.Logging;
 
@@ -11,10 +12,12 @@ namespace Business
 {
     public class TicketManager : ITicketManager
     {
-        public TicketManager(ILogger<TicketManager> logger)
+        private readonly ITicketRepository _ticketRepository;
+
+        public TicketManager(ILogger<TicketManager> logger, ITicketRepository ticketRepository)
         {
             _logger = logger;
-
+            this._ticketRepository = ticketRepository;
         }
 
         private ILogger<TicketManager> _logger { get; }
@@ -22,7 +25,7 @@ namespace Business
         public void SaveTickets(IEnumerable<CaisseLite> caisseItems)
         {
             Console.WriteLine($"{caisseItems.Count()}");
-
+            _ticketRepository.SaveTickets(caisseItems);
             var totM = caisseItems.GroupBy(x => x.ReceiptDate.Month)
                 .Select(g => new {
                     Month = g.Key,

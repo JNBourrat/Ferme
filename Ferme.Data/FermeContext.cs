@@ -24,7 +24,13 @@ public class FermeContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"));
+        Console.WriteLine();
+        var bdd = _configuration.GetSection("bddType").Value;
+        if (bdd == "postGre")
+            options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"));
+        else
+            throw new Exception("You should not be here");
+        //    options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
     }
 
 
