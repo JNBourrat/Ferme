@@ -6,7 +6,7 @@ namespace Repository.Extension
 {
     public static class DiExtension
     {
-        public static void AddFermeWeb(this IServiceCollection services)
+        public static void AddFermeRepository(this IServiceCollection services)
         {
             services.AddAutoMapperWeb();
             services.AddScoped<ITicketRepository, TicketRepository>();

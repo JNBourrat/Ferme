@@ -13,6 +13,7 @@ var env = builder.Environment;
 // Add services to the container.
 services.AddFermeWeb();
 services.AddFermeBusiness();
+services.AddFermeRepository();
 services.AddRazorPages();
 services.AddDbContext<FermeContext>();
 services.AddLogging();
