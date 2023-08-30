@@ -36,7 +36,7 @@ namespace LaFermeWeb.Pages
             var caisseItems = XmlHelper.Deserialize<Caisse>(xml.ToString());
             //Console.WriteLine(caisseItems.Ticket.Count);
 
-            var caisseItemLite = _mapper.Map<IEnumerable<CaisseLite>>(caisseItems);
+            var caisseItemLite = _mapper.Map<IEnumerable<CaisseLite>>(caisseItems.Ticket);
 
             _ticketManager.SaveTickets(caisseItemLite);
             //var specificite = caisseItems.Ticket
