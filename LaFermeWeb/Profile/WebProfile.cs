@@ -7,7 +7,7 @@ public class WebProfile : AutoMapper.Profile
 {
     public WebProfile()
     {
-        CreateMap<Caisse, CaisseLite>().ReverseMap();
+        CreateMap<Ticket, CaisseLite>().ReverseMap();
         CreateMap<LaFermeWeb.Models.BasePrice, BasePrice>().ReverseMap();
         CreateMap<LaFermeWeb.Models.Payment, Payment>().ReverseMap();
         CreateMap<LaFermeWeb.Models.PLU, PLU>().ReverseMap();
