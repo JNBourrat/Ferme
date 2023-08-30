@@ -1,15 +1,20 @@
+using Business.Extension;
+using Ferme.Data;
+using LaFermeWeb.Extension;
 using LaFermeWeb.Helper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-{
-	var services = builder.Services;
-	var env = builder.Environment;
+var services = builder.Services;
+var env = builder.Environment;
 
-	// Add services to the container.
-	services.AddRazorPages();
-	services.AddDbContext<DataContext>();
-}
+// Add services to the container.
+services.AddFermeWeb();
+services.AddFermeBusiness();
+services.AddRazorPages();
+services.AddDbContext<FermeContext>();
 
 var app = builder.Build();
 
