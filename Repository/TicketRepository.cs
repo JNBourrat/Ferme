@@ -13,7 +13,15 @@ namespace Repository
         {
             var caisseItemsEntity = mapper.Map<IEnumerable<Ferme.Data.Models.CaisseLite>>(tickets);
             db.AddRange(caisseItemsEntity);
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }        
         }
     }
 }

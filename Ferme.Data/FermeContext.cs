@@ -28,9 +28,10 @@ public class FermeContext : DbContext
         var bdd = _configuration.GetSection("bddType").Value;
         if (bdd == "postGre")
             options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"));
+        else if (bdd == "SQLServer")
+            options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
         else
-            throw new Exception("You should not be here");
-        //    options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
+            throw new Exception("Mauvaise BDD selectionnée");
     }
 
 
