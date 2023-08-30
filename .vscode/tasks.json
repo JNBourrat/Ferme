@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Lance le projet en hot reload (web + bdd)",
+            "label": "(Docker) Lance le projet en hot reload (web + bdd)",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -11,7 +11,7 @@
             ],
         },
         {
-            "label": "Ajoute une migration EF",
+            "label": "(Docker) Ajoute une migration EF",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -22,7 +22,7 @@
                 "ef",
                 "migrations",
                 "add",
-                "${input:MigrationName}" // Demande à l'utilisateur d'entrer le nom de la migration
+                "${input:migrationName}"
             ],
             "group": {
                 "kind": "build",
@@ -30,7 +30,7 @@
             }
         },
         {
-            "label": "Applique les migrations EF",
+            "label": "(Docker) Applique les migrations EF",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -46,6 +46,14 @@
                 "kind": "build",
                 "isDefault": true
             }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "migrationName",
+            "description": "Entrez le nom de la migration",
+            "type": "promptString",
+            "default": "Migration"
         }
     ]
 }
