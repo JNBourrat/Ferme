@@ -15,8 +15,4 @@ public class DataContext : DbContext
 	{
 		options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
 	}
-
-	public DbSet<PLU>? PLUs { get; set; }
 }
-
-

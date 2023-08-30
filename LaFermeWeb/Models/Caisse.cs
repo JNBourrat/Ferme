@@ -6,7 +6,6 @@
 // }
 
 using System.Xml.Serialization;
-using Microsoft.EntityFrameworkCore;
 
 [XmlRoot(ElementName = "BasePrice")]
 public class BasePrice
@@ -152,7 +151,6 @@ public class Ticket
 	public int SequenceNumber { get; set; }
 }
 
-[Keyless]
 [XmlRoot(ElementName = "PLU")]
 public class PLU
 {
