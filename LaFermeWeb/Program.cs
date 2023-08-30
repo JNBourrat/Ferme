@@ -1,9 +1,7 @@
 using Business.Extension;
 using Ferme.Data;
 using LaFermeWeb.Extension;
-using LaFermeWeb.Helper;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using Repository.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
 
