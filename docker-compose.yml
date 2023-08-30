@@ -6,7 +6,8 @@ networks:
 
 services:
   lafermeweb:
-    image: mcr.microsoft.com/dotnet/sdk:6.0
+    build:
+      context: ./LaFermeWeb
     container_name: lfdpa-caisse
     depends_on:
       - lfdpa_db

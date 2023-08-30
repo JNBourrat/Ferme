@@ -2,13 +2,50 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "docker compose lfdpa",
+            "label": "Lance le projet en hot reload (web + bdd)",
             "type": "shell",
             "command": "docker",
             "args": [
                 "compose",
                 "up"
             ],
+        },
+        {
+            "label": "Ajoute une migration EF",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "compose",
+                "run",
+                "lafermeweb",
+                "dotnet",
+                "ef",
+                "migrations",
+                "add",
+                "${input:MigrationName}" // Demande à l'utilisateur d'entrer le nom de la migration
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Applique les migrations EF",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "compose",
+                "run",
+                "lafermeweb",
+                "dotnet",
+                "ef",
+                "database",
+                "update"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
