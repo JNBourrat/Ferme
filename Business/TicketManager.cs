@@ -11,13 +11,13 @@ namespace Business
 {
     public class TicketManager : ITicketManager
     {
-        public TicketManager(ILogger logger)
+        public TicketManager(ILogger<TicketManager> logger)
         {
             _logger = logger;
 
         }
 
-        private ILogger _logger { get; }
+        private ILogger<TicketManager> _logger { get; }
 
         public void SaveTickets(IEnumerable<CaisseLite> caisseItems)
         {

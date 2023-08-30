@@ -15,6 +15,7 @@ services.AddFermeWeb();
 services.AddFermeBusiness();
 services.AddRazorPages();
 services.AddDbContext<FermeContext>();
+services.AddLogging();
 
 var app = builder.Build();
 

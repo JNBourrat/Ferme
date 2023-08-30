@@ -2,13 +2,18 @@
 using Ferme.Data.Map;
 using Ferme.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Ferme.Data;
 
 public class FermeContext : DbContext
 {
+    private readonly IConfiguration _configuration;
+
     public FermeContext(DbContextOptions<FermeContext> options, IConfiguration configuration) : base(options)
-    { }
+    {
+        _configuration = configuration;
+    }
 
     public virtual DbSet<CaisseLite> CaisseLite { get; set; }
     public virtual DbSet<BasePrice> BasePrice { get; set; }
@@ -19,7 +24,7 @@ public class FermeContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
+        options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"));
     }
 
 

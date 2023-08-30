@@ -2,17 +2,17 @@
 
 namespace LaFermeWeb.Helper;
 
-public class DataContext : DbContext
-{
-	protected readonly IConfiguration Configuration;
+//public class DataContext : DbContext
+//{
+//	protected readonly IConfiguration Configuration;
 
-	public DataContext(IConfiguration configuration)
-	{
-		Configuration = configuration;
-	}
+//	public DataContext(IConfiguration configuration)
+//	{
+//		Configuration = configuration;
+//	}
 
-	protected override void OnConfiguring(DbContextOptionsBuilder options)
-	{
-		options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
-	}
-}
+//	protected override void OnConfiguring(DbContextOptionsBuilder options)
+//	{
+//		options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
+//	}
+//}

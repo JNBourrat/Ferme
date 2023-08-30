@@ -1,4 +1,4 @@
-﻿namespace LaFermeWeb.Profile;
+﻿namespace Repository.Profile;
 
 /// <summary>
 /// Interface pour l'injection de dépendance, ne pas déplacer.
